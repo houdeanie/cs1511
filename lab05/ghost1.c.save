@@ -1,0 +1,16 @@
+#include <stdio.h> include "farnarkle.h"
+//Reading the tiles and determining whether they are valid// int 
+read_tiles(int tiles[N_TILES]) {
+    int number; //Using this for testing whether array element is valid
+    for(int counter=0;counter<N_TILES;counter++) { //This loop uses 
+counter to go through each number in the array
+        for(number=1;number<10;number++) { //This loop uses "number" to 
+check if the array contains a number between 1 and 9
+            if(tiles[counter] == number) { //If the array possesses a 
+number between 1 and 9, it will break the for loop early
+                break; //If it breaks early, number!=10, otherwise it 
+will increment to number==10, meaning tile cannot be read
+            }
+        }
+        if(number==10) { //If "number" reaches 10, then it has read an 
+i
